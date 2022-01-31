@@ -1,4 +1,5 @@
 package com.accesshq.tests.webtests;
+import com.accesshq.tests.userInterfaces.menuUI;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,10 +9,8 @@ import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-
 import java.net.MalformedURLException;
-
+import com.accesshq.tests.webtests.baseTest;
 
 public class webtestSuite {
     protected WebDriver driver;
@@ -21,34 +20,33 @@ public class webtestSuite {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\tilly\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/#/");
-    }
+}
     @AfterEach
-    public void Cleanup() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+        public void Cleanup() {
+            if (driver != null) {
+             driver.quit();
+  }
+ }
+
+  //  @Test
+  //  void getsetForms(){
+
+   // }
 
 
     @Test
     void TestFormsPage(){
 
-        driver.findElement(By.cssSelector("[aria-label='forms']")).click();
+        var myMenu = new menuUI(driver);
+        myMenu.clickForm();
+        WebElement element = driver.findElement(By.id("name"));
+        element.click();
+        element.sendKeys("Maddie");
+        Assertions.assertEquals(element.getAttribute("name").toLowerCase(),"name");
 
-        //WebElement element = driver.findElement(By.id("name"));
-        //element.click();
-        //element.sendKeys("Maddie");
-        //Assertions.assertEquals(element.getAttribute("name").toLowerCase(),"name");
-
-       //WebElement email = driver.findElement(By.id("email"));
-       //email.click();
-       //email.sendKeys("tilly.g@hotmail.com");
-
-       // WebElement state = driver.findElement(By.id("state"));
-       // state.click();
-        //state.
-       // Select drpState = new Select(driver.findElement(By.cssSelector("v-select__selections")));
-      //  drpState.selectByVisibleText("VIC");
+        WebElement email = driver.findElement(By.id("email"));
+        email.click();
+        email.sendKeys("tilly.g@hotmail.com");
 
         WebElement submitButton = null;
         var buttons = driver.findElements(By.tagName("button"));
@@ -64,7 +62,6 @@ public class webtestSuite {
         else {
             throw new NotFoundException();
         }
-
         var emailError = driver.findElement(By.id("email-err"));
         var agreeError = driver.findElement(By.id("agree-err"));
         var nameError = driver.findElement(By.id("name-err"));
@@ -74,19 +71,16 @@ public class webtestSuite {
         Assertions.assertNotNull(nameError);
 
         //var errors = driver.findElements(By.className("form-error mb-4"));
-
-        //Assertions.assertNotNull(errors);
-
-
-
-       // Assertions.assertf
-       // driver.findElement(By.())
-       // <span class="v-btn__content">submit</span>
-
-       // <div id="email-err" class="form-error mb-4"> Your email is required </div>
-              //  <div id="agree-err" class="form-error mb-4"> You must agree to continue </div>
-               // <div id="name-err" class="form-error mb-4"> Your name is required </div>
-
-
     }
+    @Test
+    void testPlanets(){
+        var myMenu = new menuUI(driver);
+        myMenu.clickPlanet();
+    }
+    @Test
+    void testHome(){
+        var myMenu = new menuUI(driver);
+        myMenu.clickHome();
+    }
+
 }
