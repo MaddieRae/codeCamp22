@@ -4,11 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.accesshq.tests.webtests.baseTest;
 
+import java.net.MalformedURLException;
+
 public class formsUserInterfaces {
     private WebDriver driver;
 
-    public formsUserInterfaces(WebDriver driver) {
-        this.driver = driver;
+    public formsUserInterfaces() throws MalformedURLException {
+        ;
     }
     public void setName(String name){
         driver.findElement(By.id("name")).sendKeys(name);

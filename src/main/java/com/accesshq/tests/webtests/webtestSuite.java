@@ -1,6 +1,6 @@
 package com.accesshq.tests.webtests;
 import com.accesshq.tests.userInterfaces.menuUI;
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -8,25 +8,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.net.MalformedURLException;
 import com.accesshq.tests.webtests.baseTest;
 
-public class webtestSuite {
-    protected WebDriver driver;
+public class webtestSuite extends baseTest{
 
-    @BeforeEach
-    public void Setup() throws MalformedURLException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\tilly\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get("https://d18u5zoaatmpxx.cloudfront.net/#/");
-}
-    @AfterEach
-        public void Cleanup() {
-            if (driver != null) {
-             driver.quit();
-  }
- }
+
+    // protected WebDriver driver;@BeforeEach
+   // var mySetup = new baseTest(getDriverSetup);
+   // mySetup.getDriverSetup
+   // public void getDriverSetup() throws MalformedURLException {
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\tilly\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        //driver = new ChromeDriver();
+       // driver.get("https://d18u5zoaatmpxx.cloudfront.net/#/");
+//}
+ //   @AfterEach
+      //  public void Cleanup() {
+      //      if (driver != null) {
+     //        driver.quit();
+ // }
+ //}
 
   //  @Test
   //  void getsetForms(){
@@ -36,8 +36,9 @@ public class webtestSuite {
 
     @Test
     void TestFormsPage(){
+        //WebDriver driver = baseTest.driver;
 
-        var myMenu = new menuUI(driver);
+        var myMenu = new menuUI();
         myMenu.clickForm();
         WebElement element = driver.findElement(By.id("name"));
         element.click();
@@ -74,13 +75,13 @@ public class webtestSuite {
     }
     @Test
     void testPlanets(){
-        var myMenu = new menuUI(driver);
+        var myMenu = new menuUI();
         myMenu.clickPlanet();
     }
-    @Test
-    void testHome(){
-        var myMenu = new menuUI(driver);
-        myMenu.clickHome();
-    }
-
+   // @Test
+  //  void testHome(){
+   //     var myMenu = new menuUI();
+    //    myMenu.clickHome();
+    //}
 }
+
