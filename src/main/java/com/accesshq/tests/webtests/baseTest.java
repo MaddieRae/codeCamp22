@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import com.accesshq.tests.userInterfaces.formsUserInterfaces;
+import com.accesshq.tests.userInterfaces.formsPage;
 import com.accesshq.tests.userInterfaces.menuUI;
 
 public abstract class baseTest {

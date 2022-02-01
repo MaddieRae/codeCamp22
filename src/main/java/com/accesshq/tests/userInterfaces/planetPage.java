@@ -24,5 +24,4 @@ public class planetPage {
         }
         throw new NotFoundException();
     }
-
 }
