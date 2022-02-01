@@ -1,38 +1,13 @@
 package com.accesshq.tests.webtests;
 import com.accesshq.tests.userInterfaces.menuUI;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.accesshq.tests.webtests.baseTest;
+import com.accesshq.tests.userInterfaces.PlanetTile;
 
 public class webtestSuite extends baseTest{
-
-
-    // protected WebDriver driver;@BeforeEach
-   // var mySetup = new baseTest(getDriverSetup);
-   // mySetup.getDriverSetup
-   // public void getDriverSetup() throws MalformedURLException {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\tilly\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        //driver = new ChromeDriver();
-       // driver.get("https://d18u5zoaatmpxx.cloudfront.net/#/");
-//}
- //   @AfterEach
-      //  public void Cleanup() {
-      //      if (driver != null) {
-     //        driver.quit();
- // }
- //}
-
-  //  @Test
-  //  void getsetForms(){
-
-   // }
-
 
     @Test
     void TestFormsPage(){
@@ -77,11 +52,14 @@ public class webtestSuite extends baseTest{
     void testPlanets(){
         var myMenu = new menuUI();
         myMenu.clickPlanet();
+       // var findingJupiter = new PlanetTile(WebElement ele);
+     //   findingJupiter.equals(findingJupiter);
+
     }
-   // @Test
-  //  void testHome(){
-   //     var myMenu = new menuUI();
-    //    myMenu.clickHome();
-    //}
+    @Test
+    void testHome(){
+        var myMenu = new menuUI();
+        myMenu.clickHome();
+    }
 }
 

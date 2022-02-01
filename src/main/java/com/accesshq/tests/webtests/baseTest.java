@@ -1,4 +1,5 @@
 package com.accesshq.tests.webtests;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -17,14 +18,11 @@ public abstract class baseTest {
 
     }
 
+    public void Cleanup(){
+        if (driver != null){
+            driver.quit();
+        }
+    }
 
-
-
-
-   // @AfterAll
-    //public void Cleanup() {
-      //  if (driver != null) {
-       //     driver.quit();
-        //}
     }
 
