@@ -7,9 +7,13 @@ import com.accesshq.tests.webtests.baseTest;
 
 import java.net.MalformedURLException;
 
-public class menuUI extends baseTest {
+public class MenuUi {
 
-       //static WebDriver driver = baseTest.driver;
+
+       protected WebDriver driver;
+       public MenuUi(WebDriver driver) {
+           this.driver = driver;
+       }
 
         public void clickForm () {
             driver.findElement(By.cssSelector("[aria-label='forms']")).click();

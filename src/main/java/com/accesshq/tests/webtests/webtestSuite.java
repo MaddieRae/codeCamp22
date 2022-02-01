@@ -1,11 +1,10 @@
 package com.accesshq.tests.webtests;
-import com.accesshq.tests.userInterfaces.menuUI;
+import com.accesshq.tests.userInterfaces.MenuUi;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
-import com.accesshq.tests.userInterfaces.PlanetTile;
 
 public class webtestSuite extends baseTest{
 
@@ -13,7 +12,7 @@ public class webtestSuite extends baseTest{
     void TestFormsPage(){
         //WebDriver driver = baseTest.driver;
 
-        var myMenu = new menuUI();
+        var myMenu = new MenuUi(driver);
         myMenu.clickForm();
         WebElement element = driver.findElement(By.id("name"));
         element.click();
@@ -50,7 +49,7 @@ public class webtestSuite extends baseTest{
     }
     @Test
     void testPlanets(){
-        var myMenu = new menuUI();
+        var myMenu = new MenuUi(driver);
         myMenu.clickPlanet();
        // var findingJupiter = new PlanetTile(WebElement ele);
      //   findingJupiter.equals(findingJupiter);
@@ -58,7 +57,7 @@ public class webtestSuite extends baseTest{
     }
     @Test
     void testHome(){
-        var myMenu = new menuUI();
+        var myMenu = new MenuUi(driver);
         myMenu.clickHome();
     }
 }

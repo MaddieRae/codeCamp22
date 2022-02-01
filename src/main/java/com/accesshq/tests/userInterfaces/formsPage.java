@@ -1,6 +1,4 @@
 package com.accesshq.tests.userInterfaces;
-import com.accesshq.tests.userInterfaces.menuUI;
-import com.accesshq.tests.webtests.baseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;

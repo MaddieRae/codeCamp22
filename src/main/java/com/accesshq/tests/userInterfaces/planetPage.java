@@ -1,5 +1,4 @@
 package com.accesshq.tests.userInterfaces;
-import com.accesshq.tests.userInterfaces.menuUI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
@@ -11,6 +10,17 @@ public class planetPage {
 
     public planetPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public PlanetTile getPlanetTile(MatchingStrategy strategy){
+        var planetTiles = driver.findElements(By.className("planet"));
+        for (WebElement tile : planetTiles){
+            PlanetTile planet = new PlanetTile(tile);
+            if (strategy.match(planet)){
+                return planet;
+            }
+        }
+        throw new NotFoundException("planet not found");
     }
 
     public PlanetTile getPlanetTilebyName(String planetName) {
