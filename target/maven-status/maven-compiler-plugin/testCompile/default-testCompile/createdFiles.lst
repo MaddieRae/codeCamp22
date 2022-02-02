@@ -1,0 +1,12 @@
+com\accesshq\tests\webtests\PlanetTests.class
+com\accesshq\tests\userInterfaces\formsPage.class
+com\accesshq\tests\userInterfaces\MenuUi.class
+com\accesshq\tests\userInterfaces\planetPage.class
+com\accesshq\tests\webtests\FormTests.class
+com\accesshq\tests\auspostTest.class
+com\accesshq\tests\webtests\WebTests.class
+com\accesshq\tests\userInterfaces\distanceMatch.class
+com\accesshq\tests\webtests\BaseTests.class
+com\accesshq\tests\userInterfaces\PlanetTile.class
+com\accesshq\tests\userInterfaces\MatchingStrategy.class
+com\accesshq\tests\userInterfaces\nameMatch.class
