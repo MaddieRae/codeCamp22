@@ -1,6 +1,4 @@
 package com.accesshq.tests.userInterfaces;
-import com.accesshq.tests.userInterfaces.MatchingStrategy;
-import com.accesshq.tests.userInterfaces.PlanetTile;
 
 public class nameMatch implements MatchingStrategy {
     String name;
