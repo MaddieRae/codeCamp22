@@ -1,6 +1,4 @@
 package com.accesshq.tests.userInterfaces;
-import com.accesshq.tests.webtests.planetTestSuite;
-import com.accesshq.tests.userInterfaces.planetPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

@@ -1,11 +1,7 @@
 package com.accesshq.tests.userInterfaces;
 
-import com.accesshq.tests.webtests.webtestSuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import com.accesshq.tests.webtests.baseTest;
-
-import java.net.MalformedURLException;
 
 public class MenuUi {
 

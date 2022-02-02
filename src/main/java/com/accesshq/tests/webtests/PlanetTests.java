@@ -4,10 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import com.accesshq.tests.userInterfaces.MenuUi;
 
-import java.util.stream.Stream;
 
-
-public class planetTestSuite extends baseTest {
+public class PlanetTests extends BaseTests {
 
 
 @Test

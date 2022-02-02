@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import com.accesshq.tests.userInterfaces.formsPage;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class formsTestSuite extends baseTest {
+public class FormTests extends BaseTests {
 
     @Test
     public void checkforPopup()

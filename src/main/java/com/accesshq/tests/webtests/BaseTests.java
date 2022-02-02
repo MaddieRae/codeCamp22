@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class baseTest {
+public class BaseTests {
     protected WebDriver driver;
 
     @BeforeEach
