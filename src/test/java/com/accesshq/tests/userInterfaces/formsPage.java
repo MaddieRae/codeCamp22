@@ -13,15 +13,15 @@ public class formsPage {
     public void setName(String name){
         driver.findElement(By.id("name")).sendKeys(name);
     }
-    public String getName(){
-        return driver.findElement(By.id("name")).getText();
-    }
+    //public String getName(){
+      //  return driver.findElement(By.id("name")).getText();
+    //}
     public void setEmail(String email){
         driver.findElement(By.id("email")).sendKeys(email);
     }
-    public String getEmail(){
-        return driver.findElement(By.id("email")).getText();
-    }
+    //public String getEmail(){
+      //  return driver.findElement(By.id("email")).getText();
+    //}
     public void clickAgree(){
         driver.findElement(By.cssSelector(".v-input--selection-controls__ripple")).click();
     }
